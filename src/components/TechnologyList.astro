@@ -1,0 +1,20 @@
+---
+import type { Tag } from "@/constants";
+
+const { tags } = Astro.props;
+---
+
+<ul class="flex flex-row my-2 gap-x-2">
+  {
+    tags.map((tag: Tag) => (
+      <li>
+        <span
+          class={`flex items-center gap-1 px-2 rounded-full text-xs text-white bg-[#171717] border border-gray-500 py-1 `}
+        >
+          <tag.icon className="size-4" />
+          {tag.name}
+        </span>
+      </li>
+    ))
+  }
+</ul>

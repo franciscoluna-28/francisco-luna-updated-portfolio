@@ -1,0 +1,30 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "Present",
+    title: "Full Stack Developer",
+    company: "Genesis Consulting Us",
+    description:
+      "Led the development of a cutting-edge legal automation platform at Genesis Consulting US, streamlining workflows and eliminating tedious paperwork. Centralized client data management, automated email notifications, and robust security measures ensured seamless collaboration and document security.",
+  },
+  {
+    date: "September 2023",
+    title: "Freelancer",
+    company: "Fiverr",
+    description:
+      "Developed websites that elevate client reach and achieve business objectives. By starting with detailed High Fidelity Mockups on Figma and integrating diverse APIs such as YouTube, I deliver contemporary websites that boost SEO by up to 80%. Additionally, my websites tackle unique challenges, driving success for businesses.",
+  },
+];
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience, index) => (
+      <li>
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

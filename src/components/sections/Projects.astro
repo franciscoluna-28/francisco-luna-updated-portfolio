@@ -1,0 +1,13 @@
+---
+import { Code } from "lucide-react";
+import SectionContainer from "../SectionContainer.astro";
+import ProjectList from "../ProjectList.astro";
+---
+
+<SectionContainer id="projects">
+  <h2 class="text-white font-semibold flex items-center text-2xl gap-2">
+    <Code height={24} width={24} className="inline" />
+    Projects
+  </h2>
+  <ProjectList />
+</SectionContainer>

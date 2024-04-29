@@ -1,0 +1,14 @@
+---
+import { PencilLine } from "lucide-react";
+import DevToArticleList from "../DevToArticleList.astro";
+import SectionContainer from "../SectionContainer.astro";
+---
+
+<SectionContainer class="w-full" id="articles">
+  <h2 class="text-white font-semibold flex items-center text-2xl gap-2">
+    <PencilLine height={24} width={24} className="inline" />
+    My Blog Articles
+  </h2>
+
+  <DevToArticleList />
+</SectionContainer>

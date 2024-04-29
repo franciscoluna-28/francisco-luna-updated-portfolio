@@ -1,0 +1,50 @@
+---
+import { downloadFile } from "@/lib/utils";
+import { Button } from "../ui/button";
+
+const handleDownloadResume= (): void => {
+  console.log("lol");
+
+};
+---
+
+<section class="lg:max-w-[600px] mr-auto w-full mt-16"  id="hero">
+  <div class="flex gap-x-16">
+    <div class="min-w-full">
+      <div class="w-full mr-auto">
+        <img
+          width="75"
+          height="75"
+          src="/me.jpg"
+          alt="Francisco Luna"
+          class="rounded-full mb-4"
+          style="object-position: 50% 50%"
+        />
+      </div>
+      <h1 class="text-white text-5xl font-semibold">
+        Hey! I’m Francisco Luna.
+      </h1>
+      <p
+        class="leading-normal *:has-[em]:text-white *:has-[em]:font-semibold *:has-[em]:not-italic text-main text-lg mt-8 text-mainGray"
+      >
+        <em class="">1 year of experience.</em>{" "}
+        <em class="">
+          Software developer, programer and freelancer from Venezuela.
+        </em>{" "}
+        I have acquired over
+        <em class="">30+ active clients</em>{" "}
+        through the apps I've developed and{" "}
+        <em class="">1000+ of readings</em> through the blog articles I've written.
+      </p>
+      <div class="flex gap-4 mt-8">
+        <a href="/public/resume.pdf" title="Francisco Luna Resume 2024" download="Francisco Luna Resume 2024.pdf">
+        <Button>Download Resume</Button>
+      </a>
+        <a href="mailto:franciscoluna2004@gmail.com"
+          ><Button className="font-normal"  variant="outline">Contact me</Button
+          ></a
+        >
+      </div>
+    </div>
+  </div>
+</section>

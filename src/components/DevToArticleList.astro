@@ -1,0 +1,14 @@
+---
+import { fetchBlogEntries } from "@/services/Blog";
+import DevToArticle from "./DevToArticle.astro";
+
+const articles = await fetchBlogEntries();
+---
+
+<div class="grid lg:grid-cols-3 gap-16 mt-16">
+  {
+    articles.map((article) => {
+      return <DevToArticle {...article} />;
+    })
+  }
+</div>

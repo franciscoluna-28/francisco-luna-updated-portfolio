@@ -1,0 +1,64 @@
+---
+import TestimonialCard from "./TestimonialCard.astro";
+
+type Testimonial = {
+  title: string;
+  comment: string;
+  authorName: string;
+  authorRole: string;
+  authorImage: string;
+};
+
+const TESTIMONIALS: Testimonial[] = [
+  {
+    title: "Amazed by Fran's Websites",
+    comment: `Fran has taken my online presence to the next level. 
+    I struggled to have a place to promote my music 
+    and thanks to him now people can see my music and download it. 
+    He was really receptive, detail oriented and he 
+    always brought new ideas to the table. 
+    If you want to establish your online presence, then he's the right 
+    person. I'd also like to say Fran is an amazing friend and human.`,
+    authorName: "PlvgueDxctxr",
+    authorRole: "Musician",
+    authorImage: "/plaguedoctorlogo.png",
+  },
+  {
+    title: "Exceptional Web Development",
+    comment: `Francisco is an excellent web developer. 
+    His professionalism, responsibility, and honesty stood out during 
+    our four-month project. Francisco's dynamic approach and 
+    managerial skills were clear and his valuable advice 
+    helped our organization grow. 
+    His exceptional commitment and loyalty
+     make him a great asset to any team or project. 
+     I highly recommend him for future projects.`,
+    authorName: "Inversiones San Antonio",
+    authorRole: "Business",
+    authorImage: "/i.jpg",
+  },
+  {
+    title: "Great Developer",
+    comment:
+      "Working with Francisco is working with someone who knows what he does, has the conviction and experience to organize and plan projects and, as a very important point, he's a great person who you can trust and grow mutually to build great things.",
+    authorName: "Vladimir Bocaranda",
+    authorRole: "Software Developer",
+    authorImage: "/vladimir.jpg",
+  },
+  {
+    title: "Disciplined and Passionate Developer",
+    comment: `Francisco is one of the most dedicated and discipline developers I've ever known and worked with. He always comes up with new ideas and delivers more than expected.
+
+His passion for code is evident with how much he works on his applications everyday, and his curiosity for new technologies.
+
+I would 100% reccomend him and work with him at some point.`,
+    authorName: "VelpCode",
+    authorRole: "Software Developer",
+    authorImage: "/velp.jpg",
+  },
+];
+---
+
+<div class="grid lg:grid-cols-2 gap-8 mt-16">
+  {TESTIMONIALS.map((testimonial) => <TestimonialCard {...testimonial} />)}
+</div>

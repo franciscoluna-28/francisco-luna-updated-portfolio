@@ -1,0 +1,26 @@
+---
+import "../styles/globals.css";
+import Hero from "@/components/sections/Hero.astro";
+import BlogArticles from "@/components/sections/BlogArticles.astro";
+import Testimonials from "@/components/sections/Testimonials.astro";
+import Projects from "@/components/sections/Projects.astro";
+import Experience from "@/components/sections/Experience.astro";
+import About from "@/components/sections/About.astro";
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout
+  title="Francisco Luna - Web Developer & Programmer - Crafting Digital Solutions"
+  description="This is the portfolio of Francisco Luna, a passionate software developer specializing in creating dynamic websites and web applications. With a year of hands-on experience, he blends creativity and functionality to deliver tailored solutions."
+>
+  <main
+    class="flex min-h-screen flex-col p-8 md:p-16 lg:p-24 max-w-[1200px] items-center m-auto"
+  >
+    <Hero />
+    <Experience />
+    <Projects />
+    <Testimonials />
+    <About />
+    <BlogArticles />
+  </main>
+</Layout>

@@ -1,0 +1,71 @@
+---
+import { User } from "lucide-react";
+import SectionContainer from "../SectionContainer.astro";
+
+const SOCIAL_MEDIA = [
+  {
+    link: "https://twitter.com/CodingWithFran",
+    displayTitle: "X",
+  },
+  {
+    link: "https://github.com/franciscoluna-28",
+    displayTitle: "GitHub",
+  },
+  {
+    link: "https://dev.to/franciscolunadev82",
+    displayTitle: "Dev.to",
+  },
+  {
+    link: "https://www.linkedin.com/in/franciscoluna28",
+    displayTitle: "LinkedIn",
+  },
+];
+---
+
+<SectionContainer id="about">
+  <h2 class="text-white font-semibold flex items-center text-2xl gap-2" >
+    <User height={24} width={24} className="inline" />
+    About me
+  </h2>
+  <article
+    class="flex flex-col items-center justify-center gap-8 text-mainGray mt-16 p-8 border-mainGray/20 shadow-sm duration-200 hover:border-main-400 hover:shadow-main-400 border rounded-lg"
+  >
+    <div
+      class="[&>p]:mb-4 [&>p>strong]:text-white dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
+    >
+      <p>
+        I'm Francisco Luna though most people just call me fran. <strong
+          >I'm currently studying Systems Engineering at Universidad
+          Bicentenaria de Aragua</strong
+        > where I've had the opportunity to a website through work team to promote
+        our product <strong>VisionGest.</strong>
+        <strong
+          >I currently work as a fullstack developer at Genesis Consulting US
+          building new functionalities for our clients.</strong
+        >
+      </p>
+      <p>
+        I've released my first MVP <strong>Hobby Explore</strong> which is an application
+        that allows you to find and share hobbies with other people with <strong
+          >+10 users.</strong
+        >
+      </p>
+      <p>
+        As a writer, <strong
+          >I've reached over 1000+ views on Dev.to with my blog entries.</strong
+        > Providing value to the development community and actively contributing
+        both my soft skills and technical knowledge. My favorite hobbies are chess
+        and music composition as well.
+      </p>
+      <ul class="flex flex-wrap gap-8 mt-8">
+      {SOCIAL_MEDIA.map((social) => {
+        return (
+          <li>
+            <a class="font-semibold text-white" href={social.link}>{social.displayTitle}</a>
+            </li>
+        ) 
+      })}
+      </ul>
+    </div>
+  </article>
+</SectionContainer>

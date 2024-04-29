@@ -1,0 +1,53 @@
+---
+import { TAGS, type Tag } from "@/constants";
+import ProjectItem from "./ProjectItem.astro";
+
+type ProjectItem = {
+  title: string;
+  description: string;
+  link: string;
+  github?: string;
+  imageUrl: string;
+  imageAlt: string;
+  tags: Tag[];
+};
+
+const PROJECTS: ProjectItem[] = [
+  {
+    title: `Genesis Consulting US - 
+    Consulting Platform`,
+    description:
+      "Web platform that automates legal procedures. My responsibilities included implementing automated email services, optimizing common legal tasks and ensuring smooth operations. The system is currently used by over 10 clients daily, resulting in enhanced client satisfaction.",
+    link: "https://genesisconsultingus.com/",
+    imageUrl: "/g.png",
+    imageAlt: "The landing page of Genesis Consulting US.",
+    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.SUPABASE],
+  },
+  {
+    title: `Hobby Explore - Social 
+    Media App`,
+    description: `Hobby Explore is a social media application that provides users a place where they can find new hobbies and share their favorite ones with other people as a community. Users can find hobbies through categories, customize their profiles for an enhanced user experience. Used by +10 users every day.`,
+    link: "https://hobby-explore.vercel.app",
+    github: "https://github.com/franciscoluna-28/hobby-explore",
+    imageUrl: "/h.png",
+    imageAlt: "An image about the feed section of Hobby Explore.",
+    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.SUPABASE],
+  },
+  {
+    title: `Inversiones San Antonio - Website`,
+    description: `Website for Inversiones San Antonio, a Venezuelan company that offers IT courses and cultural events to the community. The site showcases their services and mission, providing a seamless user experience along with the business information with a contact form.`,
+    link: "https://hobby-explore.vercel.app",
+    imageUrl: "/j.png",
+    imageAlt: "An image of the about us section of Inversiones San Antonio.",
+    tags: [TAGS.NEXT, TAGS.TAILWIND],
+  },
+];
+---
+
+<div class="flex flex-col gap-y-16 mt-16">
+  {
+    PROJECTS.map((project) => {
+      return <ProjectItem {...project} />;
+    })
+  }
+</div>

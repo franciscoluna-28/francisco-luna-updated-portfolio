@@ -1,0 +1,13 @@
+---
+import { UsersRound } from "lucide-react";
+import TestimonialList from "../TestimonialList.astro";
+import SectionContainer from "../SectionContainer.astro";
+---
+
+<SectionContainer id="testimonials">
+  <h2 class="text-white font-semibold flex items-center text-2xl gap-2">
+    <UsersRound height={24} width={24} className="inline" />
+    Testimonials
+  </h2>
+  <TestimonialList />
+</SectionContainer>

@@ -1,0 +1,19 @@
+---
+const { url, social_image, title, created_at } = Astro.props;
+---
+
+<a class="group" href={url}>
+  <article class="overflow-hidden rounded-lg">
+    <img
+      class="w-full hover:scale-110 duration-200 rounded-lg h-56 object-cover overflow-hidden"
+      src={social_image}
+      alt={title}
+    />
+    <h3 class="text-white font-semibold mt-4 mb-2 text-lg">
+      {title}
+    </h3>
+    <time class="text-mainGray/80 text-sm">
+      {new Date(created_at).toLocaleDateString()}
+    </time>
+  </article>
+</a>
