@@ -30,16 +30,16 @@ const navItems = [
 
 
 <header
-  class="opacity-0 pointer-events-none sm:opacity-100 sm:pointer-events-auto bg-[#131313]/50 backdrop-blur-sm border border-gray-500/50 rounded-full mt-4 w-min  fixed left-1/2 transform -translate-x-1/2 z-[50] shadow-lg"
+  class="opacity-0 pointer-events-none sm:opacity-100 sm:pointer-events-auto bg-[#1e1e1e]/60 backdrop-blur-sm border border-gray-500/50 rounded-full mt-4 w-min  fixed left-1/2 transform -translate-x-1/2 z-[50] shadow-lg"
 >
   <nav
     class="w-full justify-center flex space-x-6
-      text-sm *:font-normal sticky top-0 px-4 p-2.5"
+      text-sm *:font-normal sticky top-0 !px-6 p-2.5"
   >
     {
       navItems.map((link) => (
         <a
-          class="font-semibold relative block px-2 py-2 transition hover:text-main-300 text-white"
+          class="!font-semibold relative block px-2 py-2 transition hover:text-main-300 text-white"
           aria-label={link.label}
           href={link.url}
         >

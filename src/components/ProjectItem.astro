@@ -2,7 +2,7 @@
 import TechnologyList from "./TechnologyList.astro";
 import { Button } from "./ui/button";
 
-const { imageAlt, imageUrl, title, tags, description, github, link } =
+const { imageAlt, imageUrl, title, tags, description, github, link, id } =
   Astro.props;
 ---
 
@@ -36,6 +36,15 @@ const { imageAlt, imageUrl, title, tags, description, github, link } =
             <Button asChild>
               <a class="text-white font-semibold" href={github}>
                 Github
+              </a>
+            </Button>
+          )
+        }
+        {
+          id && (
+            <Button asChild>
+              <a class="text-white font-semibold" href={`/project/${id}`}>
+                Learn more
               </a>
             </Button>
           )
